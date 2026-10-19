@@ -1,0 +1,1282 @@
+[
+  {
+    "content": "Check that the electrical outlet works by plugging in another device. If it has no power, reset the circuit breaker or GFCI outlet. Make sure the power cord is fully seated and not damaged.",
+    "metadata": {
+      "ticket_id": "TKT-00001",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load washer unable to start",
+      "language": "en",
+      "created_date": "2025-10-23T12:15:14Z",
+      "updated_date": "2025-10-23T12:15:14Z"
+    }
+  },
+  {
+    "content": "Make sure the door is fully closed and the latch clicks. Remove any clothing caught in the door seal. If the door lock indicator does not light up, the door latch assembly may need replacement.",
+    "metadata": {
+      "ticket_id": "TKT-00002",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load washer will not start because door does not lock",
+      "language": "en",
+      "created_date": "2024-05-29T16:05:37Z",
+      "updated_date": "2026-04-21T14:02:01Z"
+    }
+  },
+  {
+    "content": "Check the drain hose for kinks or clogs and make sure it is not pushed too far into the standpipe. Run a drain and spin cycle with an empty tub. If water remains, the drain pump may be blocked and a technician visit is required.",
+    "metadata": {
+      "ticket_id": "TKT-00003",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Top load washer not draining",
+      "language": "en",
+      "created_date": "2024-04-12T16:38:01Z",
+      "updated_date": "2024-04-12T16:38:01Z"
+    }
+  },
+  {
+    "content": "Clean the drain pump filter located behind the small access panel at the bottom front of the washer. Place a towel and a shallow pan underneath before opening it. Check the drain hose for kinks, then run a drain and spin cycle.",
+    "metadata": {
+      "ticket_id": "TKT-00004",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load washer not draining",
+      "language": "en",
+      "created_date": "2025-08-04T16:26:14Z",
+      "updated_date": "2025-08-04T16:26:14Z"
+    }
+  },
+  {
+    "content": "Wipe the door glass and gasket and remove any lint, hair or fabric caught in the seal. Inspect the gasket for tears. Make sure the door closes evenly, since a misaligned hinge can break the seal.",
+    "metadata": {
+      "ticket_id": "TKT-00005",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Water leaking from front load door",
+      "language": "en",
+      "created_date": "2025-04-11T10:44:27Z",
+      "updated_date": "2025-04-17T13:17:09Z"
+    }
+  },
+  {
+    "content": "Turn off the water supply and inspect the inlet hose connections, tightening them if needed. Check the drain hose clamp at the back of the washer. If water drips from under the tub during agitation, the tub seal is worn and requires a technician.",
+    "metadata": {
+      "ticket_id": "TKT-00006",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_top_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Top load washer leaking from bottom",
+      "language": "en",
+      "created_date": "2024-08-15T09:05:24Z",
+      "updated_date": "2025-07-25T09:22:54Z"
+    }
+  },
+  {
+    "content": "Run a tub-clean cycle with hot water and a washer cleaner. Leave the door and detergent drawer open between washes so they can dry. Wipe the door gasket folds weekly.",
+    "metadata": {
+      "ticket_id": "TKT-00007",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Musty odor from front load washer",
+      "language": "en",
+      "created_date": "2024-12-25T15:34:07Z",
+      "updated_date": "2025-02-07T14:05:35Z"
+    }
+  },
+  {
+    "content": "Redistribute the load evenly around the agitator or impeller. Check that the washer is level and all four feet touch the floor firmly. Avoid washing a single heavy item such as a rug alone.",
+    "metadata": {
+      "ticket_id": "TKT-00008",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Top load washer vibrating excessively during spin",
+      "language": "en",
+      "created_date": "2024-11-03T13:36:12Z",
+      "updated_date": "2026-07-29T09:02:42Z"
+    }
+  },
+  {
+    "content": "Make sure the lid is fully closed and the load is balanced. Run a drain and spin cycle with an empty tub. If the drum still does not spin, the drive belt or motor coupler may be worn; premium customers can request a priority technician visit.",
+    "metadata": {
+      "ticket_id": "TKT-00009",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Top load drum not spinning",
+      "language": "en",
+      "created_date": "2024-08-28T11:55:06Z",
+      "updated_date": "2024-11-17T14:17:29Z"
+    }
+  },
+  {
+    "content": "The door stays locked while water remains in the drum or the drum is still turning. Wait 2-3 minutes after the cycle ends. If water is still visible, run a drain and spin cycle; if the door remains locked, unplug the washer for 5 minutes to release the lock.",
+    "metadata": {
+      "ticket_id": "TKT-00010",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load door will not open after cycle",
+      "language": "en",
+      "created_date": "2025-10-19T13:22:13Z",
+      "updated_date": "2026-01-10T12:44:59Z"
+    }
+  },
+  {
+    "content": "Make sure nothing is blocking the lid and that it closes completely. Check the lid strike for damage. Unplug the washer for 1 minute to reset the control. If the error persists, the lid lock assembly needs replacement.",
+    "metadata": {
+      "ticket_id": "TKT-00011",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Top load lid lock error",
+      "language": "en",
+      "created_date": "2025-12-07T10:34:46Z",
+      "updated_date": "2026-10-14T11:10:29Z"
+    }
+  },
+  {
+    "content": "Stop the cycle and unplug the washer immediately. A burning smell can indicate an overheated motor or an electrical fault. Do not use the washer again until a qualified technician has inspected it.",
+    "metadata": {
+      "ticket_id": "TKT-00012",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Burning smell from front load washer",
+      "language": "en",
+      "created_date": "2025-01-30T11:43:20Z",
+      "updated_date": "2026-08-23T08:14:52Z"
+    }
+  },
+  {
+    "content": "Plug the washer into a dedicated, grounded outlet and do not use extension cords or power strips. If the breaker still trips, the motor or wiring may have a short circuit. Leave the washer unplugged and schedule a service visit.",
+    "metadata": {
+      "ticket_id": "TKT-00013",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Circuit breaker trips when top load washer starts",
+      "language": "en",
+      "created_date": "2024-02-09T12:04:13Z",
+      "updated_date": "2025-03-25T17:56:45Z"
+    }
+  },
+  {
+    "content": "Stop the cycle immediately. The transit bolts on the back of the washer were probably not removed. Unplug the washer, remove all transit bolts with a wrench and insert the supplied caps into the holes.",
+    "metadata": {
+      "ticket_id": "TKT-00014",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "New front load washer shakes violently on first use",
+      "language": "en",
+      "created_date": "2024-11-25T15:25:56Z",
+      "updated_date": "2024-11-25T15:25:56Z"
+    }
+  },
+  {
+    "content": "Make sure the load is no more than half the wash capacity, since drying needs extra space. Keep the water supply on, because condenser models use water while drying. Clean the lint filter and the drain pump filter.",
+    "metadata": {
+      "ticket_id": "TKT-00015",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Washer-dryer combo not drying clothes",
+      "language": "en",
+      "created_date": "2025-10-27T10:15:47Z",
+      "updated_date": "2026-03-11T16:34:16Z"
+    }
+  },
+  {
+    "content": "A combined wash and dry cycle typically takes 3 to 6 hours. Reduce the load size and select a higher spin speed to remove more water before drying. Use the dry-only cycle for items that are already washed.",
+    "metadata": {
+      "ticket_id": "TKT-00016",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Washer-dryer combo cycle takes too long",
+      "language": "en",
+      "created_date": "2026-02-10T17:25:23Z",
+      "updated_date": "2026-09-27T11:08:32Z"
+    }
+  },
+  {
+    "content": "Condenser drying sends cooling water through the unit and out the drain hose. Check that the drain hose is secured and not clogged, and clean the drain pump filter. If water appears under the unit during drying, contact support to schedule service.",
+    "metadata": {
+      "ticket_id": "TKT-00017",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Washer-dryer combo leaking water during dry cycle",
+      "language": "en",
+      "created_date": "2025-05-27T08:55:07Z",
+      "updated_date": "2025-05-27T08:55:07Z"
+    }
+  },
+  {
+    "content": "Confirm the washer and phone are on the same 2.4 GHz Wi-Fi network. Restart the router and power cycle the washer. Remove the appliance from the app and pair it again following the in-app setup steps.",
+    "metadata": {
+      "ticket_id": "TKT-00018",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Smart washer not connecting to mobile app",
+      "language": "en",
+      "created_date": "2024-06-12T14:38:04Z",
+      "updated_date": "2026-09-01T14:24:38Z"
+    }
+  },
+  {
+    "content": "A weak Wi-Fi signal is the most common cause. Move the router closer or add a Wi-Fi extender near the laundry area. If the problem persists, assign the washer a fixed IP address in your router settings.",
+    "metadata": {
+      "ticket_id": "TKT-00019",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Smart washer goes offline frequently",
+      "language": "en",
+      "created_date": "2025-05-01T09:43:56Z",
+      "updated_date": "2025-05-12T16:48:17Z"
+    }
+  },
+  {
+    "content": "Remote start must be enabled on the washer before each use by pressing the remote start button after loading. Make sure the door is closed and the washer shows as online in the app.",
+    "metadata": {
+      "ticket_id": "TKT-00020",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Smart washer remote start not working",
+      "language": "en",
+      "created_date": "2026-03-05T12:27:10Z",
+      "updated_date": "2026-04-02T15:00:46Z"
+    }
+  },
+  {
+    "content": "Unplug the washer for 5 minutes, then plug it back in and keep it connected to a stable Wi-Fi network. Trigger the update again from the app settings and do not start a cycle until it finishes. Premium customers can request a remote reflash through the premium support line.",
+    "metadata": {
+      "ticket_id": "TKT-00021",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "smart_washer",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Smart washer unresponsive after firmware update failed",
+      "language": "en",
+      "created_date": "2026-06-22T10:32:58Z",
+      "updated_date": "2026-08-25T09:55:40Z"
+    }
+  },
+  {
+    "content": "Check that notifications are enabled for the app in your phone settings and in the app preferences. Update the app to the latest version and confirm the washer shows as online.",
+    "metadata": {
+      "ticket_id": "TKT-00022",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Smart washer cycle completion notifications not received",
+      "language": "en",
+      "created_date": "2024-11-08T17:12:09Z",
+      "updated_date": "2026-04-11T13:48:10Z"
+    }
+  },
+  {
+    "content": "Make sure auto-dose is enabled in the cycle options and the reservoir contains liquid HE detergent only. Flush the reservoir with warm water to clear thickened detergent. Restart the washer after cleaning.",
+    "metadata": {
+      "ticket_id": "TKT-00023",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Smart washer auto-dose not dispensing detergent",
+      "language": "en",
+      "created_date": "2025-07-13T08:38:20Z",
+      "updated_date": "2026-04-10T15:01:07Z"
+    }
+  },
+  {
+    "content": "Known issue under investigation: some smart washers restart repeatedly after installing firmware 3.2. As a temporary workaround, unplug the washer for 10 minutes and do not perform a factory reset. Engineering is preparing a fix; affected customers will be notified when it is available.",
+    "metadata": {
+      "ticket_id": "TKT-00024",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "in_progress",
+      "title": "Smart washer stuck in reboot loop after firmware 3.2",
+      "language": "en",
+      "created_date": "2026-09-16T11:03:15Z",
+      "updated_date": "2026-10-15T17:05:05Z"
+    }
+  },
+  {
+    "content": "Known issue under investigation: after updating to app version 5.0, the remaining time and cycle stage may not refresh. Pull down on the appliance screen to refresh the status. The washer itself runs normally and a fix is planned for the next app release.",
+    "metadata": {
+      "ticket_id": "TKT-00025",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "in_progress",
+      "title": "Smart app shows incorrect cycle status after app update 5.0",
+      "language": "en",
+      "created_date": "2026-10-02T16:49:08Z",
+      "updated_date": "2026-10-12T10:42:30Z"
+    }
+  },
+  {
+    "content": "If the motor runs but the agitator does not move, the agitator dogs or the motor coupler are likely worn. Both parts are covered under the extended warranty. Schedule a technician visit with your model and serial number ready.",
+    "metadata": {
+      "ticket_id": "TKT-00026",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "ext_warranty",
+      "status": "active",
+      "title": "Top load agitator not moving",
+      "language": "en",
+      "created_date": "2025-07-23T16:55:38Z",
+      "updated_date": "2025-07-23T16:55:38Z"
+    }
+  },
+  {
+    "content": "A loud roaring noise that grows with spin speed usually indicates worn drum bearings. Stop using high spin speeds and schedule a technician inspection. Drum bearing replacement is covered under the extended warranty.",
+    "metadata": {
+      "ticket_id": "TKT-00027",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "ext_warranty",
+      "status": "active",
+      "title": "Roaring noise from front load washer during spin",
+      "language": "en",
+      "created_date": "2025-03-16T11:45:19Z",
+      "updated_date": "2026-09-19T14:42:41Z"
+    }
+  },
+  {
+    "content": "Applies only to models manufactured before 2020 with the legacy control board. Unplug the washer for 5 minutes to reset the controls. If the display remains blank, the control board is replaced under the extended warranty program.",
+    "metadata": {
+      "ticket_id": "TKT-00028",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "ext_warranty",
+      "status": "deprecated",
+      "title": "Front load control panel blank on pre-2020 models",
+      "language": "en",
+      "created_date": "2024-02-18T16:28:07Z",
+      "updated_date": "2025-08-18T11:14:04Z"
+    }
+  },
+  {
+    "content": "If the tub bangs against the cabinet even with balanced loads, the suspension rods or springs may be worn. A technician should replace the suspension rods as a complete set.",
+    "metadata": {
+      "ticket_id": "TKT-00029",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Top load drum bouncing and hitting cabinet",
+      "language": "en",
+      "created_date": "2024-12-19T16:14:37Z",
+      "updated_date": "2024-12-19T16:14:37Z"
+    }
+  },
+  {
+    "content": "Too many suds usually come from non-HE detergent or using too much detergent. Run a rinse and spin cycle without detergent to clear them. Reduce the dose on future loads, especially with soft water.",
+    "metadata": {
+      "ticket_id": "TKT-00030",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Excessive suds in front load washer",
+      "language": "en",
+      "created_date": "2024-08-20T08:14:04Z",
+      "updated_date": "2024-08-20T08:14:04Z"
+    }
+  },
+  {
+    "content": "Use the recommended amount of HE detergent and do not overload the tub. Add powder detergent before the clothes, not on top of them. Select the extra rinse option for heavy loads.",
+    "metadata": {
+      "ticket_id": "TKT-00031",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Detergent residue on clothes from top load washer",
+      "language": "en",
+      "created_date": "2024-02-09T16:15:17Z",
+      "updated_date": "2024-04-21T15:13:34Z"
+    }
+  },
+  {
+    "content": "Turn off the washer and the water supply valves immediately. Overfilling usually indicates a stuck water inlet valve or a faulty water level sensor. Do not use the washer until a technician has inspected it.",
+    "metadata": {
+      "ticket_id": "TKT-00032",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Top load washer overfilling with water",
+      "language": "en",
+      "created_date": "2024-05-22T17:30:15Z",
+      "updated_date": "2025-12-27T15:51:26Z"
+    }
+  },
+  {
+    "content": "If the washer drains while it fills, the drain hose is probably inserted too far into the standpipe or positioned too low. The hose end should be no more than 6-8 inches inside a standpipe that is at least 30 inches high.",
+    "metadata": {
+      "ticket_id": "TKT-00033",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Top load washer draining while filling",
+      "language": "en",
+      "created_date": "2024-07-20T14:22:27Z",
+      "updated_date": "2024-07-20T14:22:27Z"
+    }
+  },
+  {
+    "content": "Clean the gasket folds with a diluted bleach solution and a soft cloth, wearing gloves. Run a hot tub-clean cycle afterward. Dry the gasket after the last wash of the day and leave the door slightly open.",
+    "metadata": {
+      "ticket_id": "TKT-00034",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Mold on front load door gasket",
+      "language": "en",
+      "created_date": "2025-03-03T09:03:25Z",
+      "updated_date": "2025-04-27T13:51:55Z"
+    }
+  },
+  {
+    "content": "Clean the lint filter after every drying cycle. Run the condenser clean cycle monthly to flush lint from the condenser. Separate towels from dark synthetic items to reduce lint transfer.",
+    "metadata": {
+      "ticket_id": "TKT-00035",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Lint on clothes after washer-dryer combo cycle",
+      "language": "en",
+      "created_date": "2024-04-28T11:34:28Z",
+      "updated_date": "2024-04-28T11:34:28Z"
+    }
+  },
+  {
+    "content": "A drain error means the washer could not empty the drum within the expected time. Turn off the washer, clean the drain pump filter and check the drain hose for blockages, then restart the cycle. If the code returns, contact support to schedule service.",
+    "metadata": {
+      "ticket_id": "TKT-00036",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load drain error code displayed",
+      "language": "en",
+      "created_date": "2024-05-30T15:15:55Z",
+      "updated_date": "2025-03-11T09:28:51Z"
+    }
+  },
+  {
+    "content": "Known issue under investigation: some front load washers produced in Q2 2026 show early gasket tears near the bottom of the door. Replacement gaskets are on backorder and premium customers are being contacted in priority order. Until replaced, avoid bulky loads that press against the door.",
+    "metadata": {
+      "ticket_id": "TKT-00037",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "premium",
+      "status": "in_progress",
+      "title": "Front load door gasket tearing early on 2026 Q2 production units",
+      "language": "en",
+      "created_date": "2026-08-19T08:41:34Z",
+      "updated_date": "2026-10-12T08:05:59Z"
+    }
+  },
+  {
+    "content": "Applies only to the legacy mobile app version 1.x. Pair the washer by connecting your phone directly to the washer's Wi-Fi Direct network. This method was replaced by in-app guided setup and is no longer supported.",
+    "metadata": {
+      "ticket_id": "TKT-00038",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "deprecated",
+      "title": "Pairing smart washer using Wi-Fi Direct",
+      "language": "en",
+      "created_date": "2023-10-01T14:31:30Z",
+      "updated_date": "2025-04-01T11:55:25Z"
+    }
+  },
+  {
+    "content": "Open the app, select the washer and choose Smart Diagnosis while the washer is powered on. The results are sent to premium support, who can often identify the faulty part before a technician visit. Keep the washer idle while diagnostics run.",
+    "metadata": {
+      "ticket_id": "TKT-00039",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Running remote diagnostics on smart washer",
+      "language": "en",
+      "created_date": "2024-03-08T08:24:16Z",
+      "updated_date": "2024-03-08T08:24:16Z"
+    }
+  },
+  {
+    "content": "Before operating the washer, remove the transit bolts from the back panel using the supplied wrench. Insert the hole caps into the openings. Keep the bolts in case the washer needs to be moved later; running the washer with bolts installed can cause serious damage.",
+    "metadata": {
+      "ticket_id": "TKT-00040",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Removing transit bolts before first use",
+      "language": "en",
+      "created_date": "2026-03-20T14:44:46Z",
+      "updated_date": "2026-06-01T16:42:45Z"
+    }
+  },
+  {
+    "content": "Place a level on top of the washer and adjust the front leveling feet until the washer is level side to side and front to back. Tighten the lock nuts against the cabinet. Rock the washer diagonally to confirm all four feet are firmly on the floor.",
+    "metadata": {
+      "ticket_id": "TKT-00041",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Leveling the top load washer",
+      "language": "en",
+      "created_date": "2025-05-20T12:13:03Z",
+      "updated_date": "2025-05-20T12:13:03Z"
+    }
+  },
+  {
+    "content": "Open the access panel at the bottom front of the washer. Drain remaining water through the emergency drain hose into a shallow pan, then turn the filter counterclockwise to remove it. Rinse the filter, reinstall it firmly and close the panel. Clean the filter every month.",
+    "metadata": {
+      "ticket_id": "TKT-00042",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Cleaning the drain pump filter",
+      "language": "en",
+      "created_date": "2025-08-23T13:03:03Z",
+      "updated_date": "2025-09-23T17:30:32Z"
+    }
+  },
+  {
+    "content": "Run the tub clean cycle once a month with an empty drum. Add washer cleaner or 1 cup of bleach to the bleach compartment. Do not add detergent. Leave the door open afterward to let the drum dry.",
+    "metadata": {
+      "ticket_id": "TKT-00043",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Running the tub clean cycle",
+      "language": "en",
+      "created_date": "2026-05-30T16:05:54Z",
+      "updated_date": "2026-06-13T10:04:38Z"
+    }
+  },
+  {
+    "content": "Use only high-efficiency (HE) detergent. Follow the detergent manufacturer's dosing for normal loads and use less for small loads or soft water. Overdosing leaves residue and can cause odors.",
+    "metadata": {
+      "ticket_id": "TKT-00044",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Choosing the right detergent",
+      "language": "en",
+      "created_date": "2024-03-17T14:07:56Z",
+      "updated_date": "2024-11-12T17:15:37Z"
+    }
+  },
+  {
+    "content": "Press and hold the child lock button for 3 seconds to lock the control panel during a cycle. A lock icon appears on the display. Hold the same button for 3 seconds to unlock it.",
+    "metadata": {
+      "ticket_id": "TKT-00045",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Using the child lock",
+      "language": "en",
+      "created_date": "2025-09-07T09:26:42Z",
+      "updated_date": "2025-09-07T09:26:42Z"
+    }
+  },
+  {
+    "content": "Turn off both water supply valves and disconnect the inlet hoses from the back of the washer. Gently pull out the screens with pliers and rinse them under running water. Reinstall the screens and hoses and check for leaks.",
+    "metadata": {
+      "ticket_id": "TKT-00046",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Cleaning the inlet hose screens",
+      "language": "en",
+      "created_date": "2025-08-27T12:13:42Z",
+      "updated_date": "2026-02-04T13:15:16Z"
+    }
+  },
+  {
+    "content": "The drying capacity is about half the washing capacity. When running a wash and dry cycle, load no more than the drying capacity. Overloading results in damp, wrinkled clothes and longer cycle times.",
+    "metadata": {
+      "ticket_id": "TKT-00047",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Wash and dry capacity of the washer-dryer combo",
+      "language": "en",
+      "created_date": "2025-02-16T12:29:20Z",
+      "updated_date": "2025-02-16T12:29:20Z"
+    }
+  },
+  {
+    "content": "Run the condenser clean cycle once a month or when the reminder appears. Keep the water supply on during the cycle. Clean the lint filter after every drying cycle to protect the condenser.",
+    "metadata": {
+      "ticket_id": "TKT-00048",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Cleaning the combo condenser",
+      "language": "en",
+      "created_date": "2026-02-15T15:39:36Z",
+      "updated_date": "2026-02-17T09:04:34Z"
+    }
+  },
+  {
+    "content": "Install the mobile app and create an account. Press and hold the Wi-Fi button on the washer for 3 seconds until the Wi-Fi icon blinks, then follow the in-app setup steps. The washer supports 2.4 GHz networks only.",
+    "metadata": {
+      "ticket_id": "TKT-00049",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Connecting the smart washer to Wi-Fi",
+      "language": "en",
+      "created_date": "2024-08-13T13:56:04Z",
+      "updated_date": "2024-12-26T11:23:18Z"
+    }
+  },
+  {
+    "content": "Load the washer, close the door and press the remote start button. The washer can then be started from the app within 24 hours. Opening the door cancels remote start for safety.",
+    "metadata": {
+      "ticket_id": "TKT-00050",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Enabling remote start",
+      "language": "en",
+      "created_date": "2024-06-17T12:39:51Z",
+      "updated_date": "2025-12-25T16:00:42Z"
+    }
+  },
+  {
+    "content": "If the washer is stored where temperatures fall below freezing, turn off the water supply and disconnect the inlet hoses. Pour 1 quart of RV antifreeze into the tub and run a drain and spin cycle for 1 minute. Unplug the washer until it is used again.",
+    "metadata": {
+      "ticket_id": "TKT-00051",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Winterizing the top load washer",
+      "language": "en",
+      "created_date": "2026-04-23T09:56:08Z",
+      "updated_date": "2026-10-09T12:07:56Z"
+    }
+  },
+  {
+    "content": "Unplug the washer and drain all water through the drain pump filter access. Pull the emergency door release tab located behind the access panel to unlock the door. Do not force the door handle.",
+    "metadata": {
+      "ticket_id": "TKT-00052",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Opening the front load door in an emergency",
+      "language": "en",
+      "created_date": "2024-04-26T12:18:38Z",
+      "updated_date": "2024-10-02T11:45:21Z"
+    }
+  },
+  {
+    "content": "Use only the approved stacking kit for your model. Level the washer before lifting the dryer onto it, and use two people. Attach the brackets to both appliances as shown in the kit instructions; top load washers cannot be stacked.",
+    "metadata": {
+      "ticket_id": "TKT-00053",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Installing the stacking kit",
+      "language": "en",
+      "created_date": "2024-08-03T16:31:16Z",
+      "updated_date": "2025-04-30T08:05:40Z"
+    }
+  },
+  {
+    "content": "This error code table applies only to top load models manufactured before 2019. It has been replaced by the unified error code reference in the current manual. Refer to the current reference for newer models.",
+    "metadata": {
+      "ticket_id": "TKT-00054",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "deprecated",
+      "title": "Error code reference for models before 2019",
+      "language": "en",
+      "created_date": "2024-04-09T12:02:00Z",
+      "updated_date": "2026-03-06T13:49:08Z"
+    }
+  },
+  {
+    "content": "Open the detergent drawer and fill the auto-dose reservoir with liquid HE detergent up to the MAX line. Do not use powder, pods or fabric softener in the reservoir. One fill typically lasts 20 to 30 loads.",
+    "metadata": {
+      "ticket_id": "TKT-00055",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Filling the auto-dose reservoir",
+      "language": "en",
+      "created_date": "2025-10-21T15:35:45Z",
+      "updated_date": "2026-01-11T14:35:00Z"
+    }
+  },
+  {
+    "content": "Before purchase, check that the installation space allows at least 1 inch on each side and 4 inches behind the unit for hoses. The combo requires a standard 120 V grounded outlet and a drain standpipe. No external dryer vent is needed.",
+    "metadata": {
+      "ticket_id": "TKT-00056",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "prospective",
+      "status": "active",
+      "title": "Washer-dryer combo dimensions and installation clearances",
+      "language": "en",
+      "created_date": "2024-05-01T10:34:02Z",
+      "updated_date": "2024-05-01T10:34:02Z"
+    }
+  },
+  {
+    "content": "The front load washer uses about 13 gallons of water per normal cycle and is ENERGY STAR certified. Using cold water cycles further reduces energy use. Consumption varies with cycle selection and load size.",
+    "metadata": {
+      "ticket_id": "TKT-00057",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "prospective",
+      "status": "active",
+      "title": "Energy and water consumption of the front load washer",
+      "language": "en",
+      "created_date": "2026-05-11T10:27:08Z",
+      "updated_date": "2026-09-29T08:19:23Z"
+    }
+  },
+  {
+    "content": "Duplicate charges are usually a temporary authorization hold that drops off within 3-5 business days. If both charges post, contact billing support with the order number and the duplicate charge is refunded within 5-7 business days.",
+    "metadata": {
+      "ticket_id": "TKT-00058",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Charged twice for washer order",
+      "language": "en",
+      "created_date": "2026-04-02T13:13:43Z",
+      "updated_date": "2026-04-12T11:42:06Z"
+    }
+  },
+  {
+    "content": "Returns are accepted within 30 days of delivery. The refund is issued to the original payment method after the returned washer passes inspection, typically within 10 business days of pickup. You will receive an email when the refund is processed.",
+    "metadata": {
+      "ticket_id": "TKT-00059",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Refund status for returned washer",
+      "language": "en",
+      "created_date": "2025-01-04T17:47:09Z",
+      "updated_date": "2026-02-24T11:55:10Z"
+    }
+  },
+  {
+    "content": "The premium smart features plan renews automatically every year. The renewal date and amount are shown under Account > Subscriptions in the app. Renewals cancelled within 14 days of the charge receive a full refund.",
+    "metadata": {
+      "ticket_id": "TKT-00060",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Unexpected smart features subscription renewal charge",
+      "language": "en",
+      "created_date": "2026-04-06T08:11:47Z",
+      "updated_date": "2026-07-20T13:50:59Z"
+    }
+  },
+  {
+    "content": "Go to Account > Subscriptions in the app and select Cancel subscription. Premium features remain active until the end of the current billing period. Basic app control continues to work without a subscription.",
+    "metadata": {
+      "ticket_id": "TKT-00061",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "smart_washer",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Cancelling the smart features subscription",
+      "language": "en",
+      "created_date": "2025-03-04T12:10:50Z",
+      "updated_date": "2025-11-13T09:24:55Z"
+    }
+  },
+  {
+    "content": "Confirmation emails are sent within 24 hours of purchase. Check your spam folder and verify the email address on your account. Billing support can resend the confirmation and invoice using the order number.",
+    "metadata": {
+      "ticket_id": "TKT-00062",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "ext_warranty",
+      "status": "active",
+      "title": "Extended warranty purchase confirmation not received",
+      "language": "en",
+      "created_date": "2024-02-16T11:52:58Z",
+      "updated_date": "2024-09-30T15:22:19Z"
+    }
+  },
+  {
+    "content": "If a technician charged you for a covered repair, submit the repair invoice and your warranty number to billing support. Approved reimbursements are issued within 10 business days.",
+    "metadata": {
+      "ticket_id": "TKT-00063",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P2",
+      "product_type": "washer_top_load",
+      "customer_tier": "ext_warranty",
+      "status": "active",
+      "title": "Charged for a repair covered by extended warranty",
+      "language": "en",
+      "created_date": "2026-04-27T11:01:42Z",
+      "updated_date": "2026-06-24T11:25:21Z"
+    }
+  },
+  {
+    "content": "Financing is available at checkout for purchases over $500, with 6, 12 or 24 month plans subject to credit approval. Interest-free promotions are displayed on the product page when available.",
+    "metadata": {
+      "ticket_id": "TKT-00064",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P4",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "prospective",
+      "status": "active",
+      "title": "Financing options for washer purchase",
+      "language": "en",
+      "created_date": "2024-10-19T13:41:32Z",
+      "updated_date": "2025-07-31T14:43:53Z"
+    }
+  },
+  {
+    "content": "Prices are matched for identical models sold by authorized retailers. Send a link to the lower price before placing your order. Price matching does not apply to clearance, open-box or marketplace listings.",
+    "metadata": {
+      "ticket_id": "TKT-00065",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "prospective",
+      "status": "active",
+      "title": "Price match request before purchase",
+      "language": "en",
+      "created_date": "2025-07-10T09:56:16Z",
+      "updated_date": "2025-07-24T10:37:16Z"
+    }
+  },
+  {
+    "content": "Check that the promo code has not expired and that the washer qualifies for the promotion. Only one promo code can be used per order. If the code was valid but not applied, billing support can issue a price adjustment within 14 days of purchase.",
+    "metadata": {
+      "ticket_id": "TKT-00066",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Promo code not applied to order",
+      "language": "en",
+      "created_date": "2024-02-16T14:22:46Z",
+      "updated_date": "2024-02-16T14:22:46Z"
+    }
+  },
+  {
+    "content": "The 2024 mail-in rebate program for top load washers has ended and submissions are no longer accepted. Rebates submitted before the deadline were processed within 8-10 weeks. See current promotions on the product page.",
+    "metadata": {
+      "ticket_id": "TKT-00067",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "all",
+      "status": "deprecated",
+      "title": "Mail-in rebate program 2024",
+      "language": "en",
+      "created_date": "2024-03-22T14:38:32Z",
+      "updated_date": "2025-06-15T09:24:57Z"
+    }
+  },
+  {
+    "content": "Known issue under investigation: some card payments fail at the last checkout step in the mobile app. Your card is not charged when this error occurs. Complete the purchase on the website as a workaround while the fix is being deployed.",
+    "metadata": {
+      "ticket_id": "TKT-00068",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P2",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "in_progress",
+      "title": "Payment failing at checkout in mobile app",
+      "language": "en",
+      "created_date": "2026-08-25T08:45:27Z",
+      "updated_date": "2026-10-15T08:33:59Z"
+    }
+  },
+  {
+    "content": "The extended warranty covers parts and labor for mechanical and electrical failures during normal household use. It does not cover cosmetic damage, damage from improper installation or commercial use. Keep your proof of purchase to file claims.",
+    "metadata": {
+      "ticket_id": "TKT-00069",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P4",
+      "product_type": "washer_front_load",
+      "customer_tier": "ext_warranty",
+      "status": "active",
+      "title": "What the extended warranty covers",
+      "language": "en",
+      "created_date": "2026-04-12T11:23:27Z",
+      "updated_date": "2026-10-13T09:42:58Z"
+    }
+  },
+  {
+    "content": "Go to Account > Billing on the website or app and select Update payment method. The new card is used for the next renewal. If a renewal payment failed, update the card within 7 days to avoid losing premium benefits.",
+    "metadata": {
+      "ticket_id": "TKT-00070",
+      "doc_type": "support_ticket",
+      "product_area": "billing",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Updating payment method for premium plan",
+      "language": "en",
+      "created_date": "2024-12-11T12:32:19Z",
+      "updated_date": "2025-04-17T14:20:25Z"
+    }
+  },
+  {
+    "content": "Do not install or plug in a washer that arrived damaged. Take photos of the damage and the packaging and report it within 48 hours of delivery. A replacement or repair is arranged at no cost.",
+    "metadata": {
+      "ticket_id": "TKT-00071",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Washer arrived damaged",
+      "language": "en",
+      "created_date": "2025-12-21T11:26:42Z",
+      "updated_date": "2026-02-24T14:43:47Z"
+    }
+  },
+  {
+    "content": "Use the tracking link in your shipping confirmation email or check Orders in your account. The carrier calls the day before delivery to confirm a 4-hour delivery window.",
+    "metadata": {
+      "ticket_id": "TKT-00072",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Tracking washer delivery",
+      "language": "en",
+      "created_date": "2024-07-04T14:35:53Z",
+      "updated_date": "2025-05-08T08:19:18Z"
+    }
+  },
+  {
+    "content": "Deliveries can be rescheduled up to 24 hours before the confirmed window from the Orders page or by contacting support. Missed deliveries without notice may incur a redelivery fee.",
+    "metadata": {
+      "ticket_id": "TKT-00073",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P3",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Rescheduling washer delivery",
+      "language": "en",
+      "created_date": "2024-08-10T17:41:20Z",
+      "updated_date": "2026-03-26T15:28:28Z"
+    }
+  },
+  {
+    "content": "Premium orders include installation with delivery. If the crew could not complete it, for example due to missing shutoff valves or a damaged outlet, contact support to schedule a free return visit once the issue is fixed.",
+    "metadata": {
+      "ticket_id": "TKT-00074",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "premium",
+      "status": "active",
+      "title": "Delivery crew did not complete installation",
+      "language": "en",
+      "created_date": "2025-11-29T15:50:57Z",
+      "updated_date": "2025-11-29T15:50:57Z"
+    }
+  },
+  {
+    "content": "Standard delivery takes 5-10 business days in most areas, and expedited delivery is available in select metro areas. Enter your ZIP code on the product page to see delivery options before ordering.",
+    "metadata": {
+      "ticket_id": "TKT-00075",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P4",
+      "product_type": "washer_top_load",
+      "customer_tier": "prospective",
+      "status": "active",
+      "title": "Delivery timeframes and service areas",
+      "language": "en",
+      "created_date": "2026-04-02T09:18:32Z",
+      "updated_date": "2026-09-17T17:21:05Z"
+    }
+  },
+  {
+    "content": "Haul-away of your old washer can be added at checkout or up to 48 hours before delivery. The old washer must be disconnected and drained before the crew arrives.",
+    "metadata": {
+      "ticket_id": "TKT-00076",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P3",
+      "product_type": "washer_top_load",
+      "customer_tier": "standard",
+      "status": "active",
+      "title": "Haul-away of old washer",
+      "language": "en",
+      "created_date": "2026-04-25T12:14:51Z",
+      "updated_date": "2026-06-24T11:09:01Z"
+    }
+  },
+  {
+    "content": "Measure doorways, hallways and stairwells before delivery; the unit needs about 1 inch of clearance beyond its depth. If the crew cannot bring the washer in, it is returned to the warehouse and a full refund or exchange is offered.",
+    "metadata": {
+      "ticket_id": "TKT-00077",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P2",
+      "product_type": "washer_dryer_combo",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Washer does not fit through doorway",
+      "language": "en",
+      "created_date": "2024-02-24T15:39:54Z",
+      "updated_date": "2024-02-24T15:39:54Z"
+    }
+  },
+  {
+    "content": "Known issue: deliveries in some regions are delayed by 5-7 days due to limited carrier capacity. Affected customers receive an updated delivery window by email. The logistics team is adding carriers and this article will be updated.",
+    "metadata": {
+      "ticket_id": "TKT-00078",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P2",
+      "product_type": "smart_washer",
+      "customer_tier": "all",
+      "status": "in_progress",
+      "title": "Delivery delays due to carrier capacity",
+      "language": "en",
+      "created_date": "2026-08-10T14:56:40Z",
+      "updated_date": "2026-10-18T10:12:45Z"
+    }
+  },
+  {
+    "content": "The free white-glove delivery promotion for front load washers has ended. Orders placed during the promotion still receive white-glove delivery. Current delivery options and fees are shown at checkout.",
+    "metadata": {
+      "ticket_id": "TKT-00079",
+      "doc_type": "support_ticket",
+      "product_area": "shipping",
+      "priority": "P3",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "deprecated",
+      "title": "Free white-glove delivery promotion",
+      "language": "en",
+      "created_date": "2024-02-29T14:15:09Z",
+      "updated_date": "2025-09-16T08:57:48Z"
+    }
+  },
+  {
+    "content": "Remove all packaging, including the foam base under the washer, before installation. Inspect the washer for shipping damage and report it within 48 hours. Keep the transit bolts after removing them in case the washer needs to be moved.",
+    "metadata": {
+      "ticket_id": "TKT-00080",
+      "doc_type": "user_manual",
+      "product_area": "customer_support",
+      "priority": "P2",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Unpacking and inspecting the front load washer",
+      "language": "en",
+      "created_date": "2026-06-07T14:14:11Z",
+      "updated_date": "2026-07-04T16:29:03Z"
+    }
+  }
+]

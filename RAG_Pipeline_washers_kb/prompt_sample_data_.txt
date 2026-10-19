@@ -1,0 +1,27 @@
+Act like a data sample generator.
+
+I need sample data for support tickets related to washing machine issues and their possible solutions.
+
+Ask me questions for every iteration until the sample data is good enough.
+
+Generate a collection of sample data in json format.
+Each object has the following structure:
+
+  {
+    "content": "Check that the electrical outlet works by plugging in another device. If it has no power, reset the circuit breaker or GFCI outlet. Make sure the power cord is fully seated and not damaged.",
+    "metadata": {
+      "ticket_id": "TKT-00001",
+      "doc_type": "support_ticket",
+      "product_area": "customer_support",
+      "priority": "P1",
+      "product_type": "washer_front_load",
+      "customer_tier": "all",
+      "status": "active",
+      "title": "Front load washer unable to start",
+      "language": "en",
+      "created_date": "2025-10-23T12:15:14Z",
+      "updated_date": "2025-10-23T12:15:14Z"
+    }
+  }
+
+ 
