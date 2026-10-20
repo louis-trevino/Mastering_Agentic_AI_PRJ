@@ -12,6 +12,8 @@ uv sync
 ```
 
 ## Run Ingestion App
+
+The Ingestion app only needs to be run once, or every time the Knowledge Base data (json) changes.
 ```
 py ingest.py
 ```
@@ -20,4 +22,10 @@ py ingest.py
 ```
 py retriever_hybrid.py
 ```
+
+## Sample user query
+
+You can use the User Query below to test the Retriever app:
+
+My front load washer door won't open. What can I do?
 

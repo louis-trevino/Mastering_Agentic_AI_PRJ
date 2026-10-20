@@ -93,7 +93,7 @@ def show_hybrid(query):
     bm25_docs = bm25_retriever.invoke(query)
     fused_docs = ensemble_retriever.invoke(query)
 
-    print(f"QUERY: {query}\n")
+    # print(f"QUERY: {query}\n")
     # print("Citations - semantic:")
     for doc in vector_docs:
         m = doc.metadata
