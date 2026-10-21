@@ -1,5 +1,16 @@
 # MegaWasher RAG App
 
+
+## Project Links
+
+[Documentation](https://docs.google.com/document/d/1UxR1Wpt8PjF3Yl5VHa8RpFMtSpVUAz8KTxyUZBsHRBE/edit?tab=t.0)
+
+[Sample data](./kb_washers_01.json)
+
+[Demo](https://www.loom.com/share/317e2ab3b43341cb8514752e1a22163f)
+
+## Project Description
+
 MegaWash RAG App helps customers answer customer support questions from the internal Knowledge Base (support tickets + FAQ documents + product manuals).
 
 An ingestion program written in Python will take the data and perform extraction, fragmentation into chunks, embedding , indexing and saving the resulting vector data into a PineCone vector database. 
@@ -28,4 +39,3 @@ py retriever_hybrid.py
 You can use the User Query below to test the Retriever app:
 
 My front load washer door won't open. What can I do?
-
