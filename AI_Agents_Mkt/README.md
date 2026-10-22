@@ -4,7 +4,7 @@
 
 ### The Marketing Research Agent
 
-By Luis C Trevino 2026.
+By Luis C Trevino, 2026.
 
 The Marketing Research Agent runs a competitive market research pipeline for a company. It discovers the company's top competitors, gathers fresh web and news data about each one with the Keenable search engine, and turns the findings into structured competitor analysis cards plus a briefing.
 
@@ -45,7 +45,15 @@ Optionally, set `GROQ_MODEL` to use a different Groq model (default `openai/gpt-
 ## Run the Streamlit App
 
 ```
+To run the app, from the AI_Agents_Mkt folder:
+
+
+.\.venv\Scripts\activate
 streamlit run app.py
+Or without activating the venv:
+
+
+uv run streamlit run app.py
 ```
 
 The sidebar has four settings:
