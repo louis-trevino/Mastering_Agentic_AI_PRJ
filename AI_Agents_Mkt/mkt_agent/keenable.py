@@ -8,7 +8,7 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession
 from mcp.client.streamable_http import create_mcp_http_client, streamable_http_client
 
-from . import config
+from . import cache, config
 
 KEENABLE_RETRIES = 4
 
@@ -90,7 +90,14 @@ class KeenableClient:
             args["site"] = site
         if published_after:
             args["published_after"] = published_after
-        return json.loads(await self._call("search_web_pages", args)).get("results", [])
+
+        key = cache.make_key(args)
+        cached = cache.get("keenable", key)
+        if cached is not None:
+            return cached
+        results = json.loads(await self._call("search_web_pages", args)).get("results", [])
+        cache.put("keenable", key, results)
+        return results
 
     async def fetch(self, url: str, *, prompt: str | None = None, max_chars: int = 20000) -> str:
         """Return a page as markdown, or only the part matching `prompt` when given."""

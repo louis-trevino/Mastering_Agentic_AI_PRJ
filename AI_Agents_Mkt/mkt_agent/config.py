@@ -23,6 +23,13 @@ NEWS_LOOKBACK_DAYS = 90
 SEARCH_MAX_RESULTS = 5
 SNIPPET_MAX_LENGTH = 800
 
+# Disk cache for Keenable results and LLM outputs (saves quota on repeated research)
+CACHE_DIR = PROJECT_DIR / ".cache" / "mkt_agent"
+CACHE_TTL_HOURS = 6
+
+# Saved briefings (Markdown + JSON per run)
+REPORTS_DIR = PROJECT_DIR / "reports"
+
 
 def check_config() -> None:
     missing = [name for name, value in (("GROQ_API_KEY", GROQ_API_KEY), ("KEENABLE_API_KEY", KEENABLE_API_KEY)) if not value]

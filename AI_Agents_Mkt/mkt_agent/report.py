@@ -1,15 +1,62 @@
 """Render a finished research state as a Markdown briefing."""
 
-from datetime import date
+from datetime import datetime
 
 from .schemas import CompetitorCard, CompetitorReport
 
+COMPARISON_COLUMNS = ["Competitor", "Starting price", "Free plan", "Target segment", "Key differentiator", "Latest news"]
+
+
+def _cell(text: str) -> str:
+    """Make text safe for a Markdown table cell."""
+    return " ".join(str(text).split()).replace("|", "\\|")
+
+
+def generated_date(state: dict) -> str:
+    return state.get("generated_at", datetime.now().isoformat(timespec="seconds"))[:10]
+
+
+def comparison_rows(reports: list[CompetitorReport]) -> list[dict[str, str]]:
+    """One row per analyzed competitor for the side-by-side comparison (no LLM call)."""
+    rows = []
+    for r in reports:
+        if not r.card:
+            continue
+        card, pos = r.card, r.card.market_positioning
+        latest = card.recent_news[0] if card.recent_news else None
+        values = [
+            r.competitor.name,
+            card.starting_price,
+            card.free_plan,
+            pos.target_segment,
+            pos.differentiators[0] if pos.differentiators else "",
+            f"{latest.date or 'n/a'}: {latest.headline}" if latest else "None found",
+        ]
+        rows.append(dict(zip(COMPARISON_COLUMNS, values)))
+    return rows
+
+
+def comparison_markdown(reports: list[CompetitorReport]) -> str:
+    rows = comparison_rows(reports)
+    if not rows:
+        return "_No competitors could be analyzed._"
+    lines = ["| " + " | ".join(COMPARISON_COLUMNS) + " |", "|" + "---|" * len(COMPARISON_COLUMNS)]
+    lines += ["| " + " | ".join(_cell(row[c]) for c in COMPARISON_COLUMNS) + " |" for row in rows]
+    return "\n".join(lines)
+
 
 def card_markdown(card: CompetitorCard) -> str:
-    lines = [card.overview, "", "**Pricing**", ""]
+    lines = [
+        card.overview,
+        "",
+        "**Pricing**",
+        "",
+        f"Starting price: **{card.starting_price}** · Free plan: **{card.free_plan}**",
+        "",
+    ]
     if card.pricing:
         lines += ["| Plan | Price | Details |", "|---|---|---|"]
-        lines += [f"| {t.plan} | {t.price} | {t.details} |" for t in card.pricing]
+        lines += [f"| {_cell(t.plan)} | {_cell(t.price)} | {_cell(t.details)} |" for t in card.pricing]
     if card.pricing_notes:
         lines += ["", f"_{card.pricing_notes}_"]
 
@@ -45,9 +92,10 @@ def report_markdown(report: CompetitorReport) -> str:
 
 def briefing_markdown(state: dict) -> str:
     profile, briefing = state["profile"], state.get("briefing")
+    reports = state.get("reports", [])
     parts = [
         f"# Competitive Briefing: {profile.name}",
-        f"_{profile.industry} | {profile.website} | generated {date.today().isoformat()}"
+        f"_{profile.industry} | {profile.website} | generated {generated_date(state)}"
         f" | news from the last {state.get('news_days', '?')} days_",
         profile.description,
     ]
@@ -57,8 +105,9 @@ def briefing_markdown(state: dict) -> str:
             briefing.executive_summary,
             "## Key takeaways",
             "\n".join(f"- {t}" for t in briefing.key_takeaways),
-            "## Pricing comparison",
-            briefing.pricing_comparison,
         ]
-    parts += [report_markdown(r) for r in state.get("reports", [])]
+    parts += ["## Comparison at a glance", comparison_markdown(reports)]
+    if briefing:
+        parts += ["## Pricing comparison", briefing.pricing_comparison]
+    parts += [report_markdown(r) for r in reports]
     return "\n\n".join(parts)

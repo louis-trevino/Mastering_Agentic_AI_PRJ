@@ -1,4 +1,4 @@
-"""CLI: python -m mkt_agent "Company name" [website] [-n 3] [--news-days 90] [--review]"""
+"""CLI: python -m mkt_agent "Company name" [website] [-n 3] [--news-days 90] [--review] [--no-cache] [--no-save]"""
 
 import argparse
 import asyncio
@@ -9,6 +9,7 @@ from contextlib import aclosing
 from . import config
 from .orchestrator import make_checkpointer, research_inputs, stream_research
 from .report import briefing_markdown
+from .storage import save_report
 
 
 def review_in_terminal(proposal: dict) -> list[dict]:
@@ -36,7 +37,9 @@ async def main(args: argparse.Namespace) -> None:
     )
     resume = None
     while True:
-        events = stream_research(inputs if resume is None else None, resume=resume, checkpointer=checkpointer)
+        events = stream_research(
+            inputs if resume is None else None, resume=resume, checkpointer=checkpointer, use_cache=not args.no_cache
+        )
         async with aclosing(events):  # close the stream (and Keenable connection) in this task
             async for kind, data in events:
                 if kind == "update":
@@ -46,6 +49,8 @@ async def main(args: argparse.Namespace) -> None:
                     resume = await asyncio.to_thread(review_in_terminal, data)
                 else:
                     print(briefing_markdown(data))
+                    if not args.no_save:
+                        print(f"Saved to {save_report(data)}", file=sys.stderr)
                     return
 
 
@@ -57,4 +62,6 @@ if __name__ == "__main__":
                         choices=range(1, config.MAX_COMPETITORS + 1), metavar=f"1-{config.MAX_COMPETITORS}")
     parser.add_argument("--news-days", type=int, default=config.NEWS_LOOKBACK_DAYS, help="news lookback window")
     parser.add_argument("--review", action="store_true", help="review the competitors before researching them")
+    parser.add_argument("--no-cache", action="store_true", help="force fresh searches and LLM calls")
+    parser.add_argument("--no-save", action="store_true", help="don't save the briefing to reports/")
     asyncio.run(main(parser.parse_args()))

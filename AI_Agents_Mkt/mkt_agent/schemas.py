@@ -4,6 +4,8 @@ Every field is required (no defaults) so the schemas work with Groq's strict
 JSON-schema mode; agents use "" or [] when information is unavailable.
 """
 
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -50,6 +52,10 @@ class CompetitorCard(BaseModel):
     overview: str = Field(description="2-3 sentence overview of the company and its offering")
     pricing: list[PricingTier] = Field(description="Pricing tiers found in the research; [] if none")
     pricing_notes: str = Field(description="Pricing model notes or caveats, e.g. 'pricing not public'")
+    starting_price: str = Field(
+        description="Cheapest PAID plan price as stated, e.g. '$10/user/month'; 'Contact sales' or 'Unknown' if not public"
+    )
+    free_plan: Literal["Yes", "No", "Free trial only", "Unknown"]
     core_features: list[str] = Field(description="5-8 core product features")
     market_positioning: MarketPositioning
     recent_news: list[NewsItem] = Field(description="Most relevant recent news, newest first; [] if none")

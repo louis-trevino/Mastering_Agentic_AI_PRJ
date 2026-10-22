@@ -13,6 +13,7 @@ Why it competes: {reason}
 Extract pricing, core features, market positioning and recent news for {name}
 using ONLY the research data below. Rules:
 - Do not invent prices. If no pricing is found, return pricing [] and explain in pricing_notes.
+- starting_price is the cheapest paid plan; free_plan says whether a free-forever plan exists.
 - recent_news: only items about {name} from the NEWS section, newest first, max 5,
   with URLs copied exactly from the data.
 - Strengths and weaknesses are relative to {company}.

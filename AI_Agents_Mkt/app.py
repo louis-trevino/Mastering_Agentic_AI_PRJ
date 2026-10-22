@@ -3,12 +3,11 @@
 Run with:  streamlit run app.py
 
 Flow: enter a company -> the agents profile it and discover competitors -> (optional)
-review/edit the competitor list -> research + analysis -> briefing.
+review/edit the competitor list -> research + analysis -> briefing (auto-saved to reports/).
 """
 
 import asyncio
 import json
-import re
 import time
 import uuid
 from contextlib import aclosing
@@ -16,8 +15,9 @@ from contextlib import aclosing
 import groq
 import streamlit as st
 
-from mkt_agent import briefing_markdown, config, make_checkpointer, research_inputs, stream_research
-from mkt_agent.report import card_markdown
+from mkt_agent import briefing_markdown, cache, config, make_checkpointer, research_inputs, stream_research
+from mkt_agent.report import card_markdown, comparison_rows
+from mkt_agent.storage import list_reports, load_report, save_report, slugify, state_to_dict
 
 st.set_page_config(page_title="Marketing Research Agent", page_icon="🔎", layout="wide")
 
@@ -34,7 +34,7 @@ ss.setdefault("phase", "input")  # input -> review -> done
 
 
 def reset() -> None:
-    for key in ("phase", "proposal", "result", "thread_id", "checkpointer"):
+    for key in ("phase", "proposal", "result", "saved_path", "thread_id", "checkpointer"):
         ss.pop(key, None)
     ss.phase = "input"
 
@@ -45,7 +45,9 @@ async def run_pipeline(status, **stream_args) -> tuple[str, dict]:
     start = time.perf_counter()
     # aclosing() shuts the stream (and its Keenable connection) down in this task when we return early;
     # otherwise the generator is finalized later from another task and MCP's cleanup fails
-    events = stream_research(thread_id=ss.thread_id, checkpointer=ss.checkpointer, **stream_args)
+    events = stream_research(
+        thread_id=ss.thread_id, checkpointer=ss.checkpointer, use_cache=ss.use_cache, **stream_args
+    )
     async with aclosing(events):
         async for kind, data in events:
             if kind != "update":
@@ -85,19 +87,8 @@ def run_leg(label: str, **stream_args) -> None:
         ss.phase, ss.proposal = "review", data
     else:
         ss.phase, ss.result = "done", data
+        ss.saved_path = save_report(data)
     st.rerun()
-
-
-def state_to_json(state: dict) -> str:
-    return json.dumps(
-        {
-            "profile": state["profile"].model_dump(),
-            "settings": {"num_competitors": state.get("num_competitors"), "news_days": state.get("news_days")},
-            "briefing": state["briefing"].model_dump() if state.get("briefing") else None,
-            "competitors": [r.model_dump() for r in state.get("reports", [])],
-        },
-        indent=2,
-    )
 
 
 def show_review() -> None:
@@ -141,13 +132,30 @@ def show_review() -> None:
 
 def show_results(state: dict) -> None:
     profile, briefing = state["profile"], state.get("briefing")
+    reports = state.get("reports", [])
     st.header(f"Competitive Briefing: {profile.name}")
-    st.caption(f"{profile.industry} · {profile.website} · news from the last {state.get('news_days')} days")
+    st.caption(
+        f"{profile.industry} · {profile.website} · generated {state['generated_at'].replace('T', ' ')[:16]}"
+        f" · news from the last {state.get('news_days')} days"
+    )
+    if ss.get("saved_path"):
+        path = ss.saved_path
+        shown = path.relative_to(config.PROJECT_DIR) if path.is_relative_to(config.PROJECT_DIR) else path
+        st.caption(f"Saved to `{shown}` (+ .md)")
     st.write(profile.description)
 
     if briefing:
         st.subheader("Executive summary")
         st.write(briefing.executive_summary)
+
+    st.subheader("Comparison at a glance")
+    rows = comparison_rows(reports)
+    if rows:
+        st.dataframe(rows, hide_index=True, width="stretch")
+    else:
+        st.info("No competitors could be analyzed.")
+
+    if briefing:
         col1, col2 = st.columns(2)
         with col1:
             st.subheader("Key takeaways")
@@ -156,7 +164,6 @@ def show_results(state: dict) -> None:
             st.subheader("Pricing comparison")
             st.write(briefing.pricing_comparison)
 
-    reports = state.get("reports", [])
     st.subheader("Competitor analysis cards")
     for tab, report in zip(st.tabs([f"{r.rank}. {r.competitor.name}" for r in reports]), reports):
         with tab:
@@ -170,10 +177,12 @@ def show_results(state: dict) -> None:
             with st.expander(f"Sources ({len(report.sources)})"):
                 st.markdown("\n".join(f"- {u}" for u in report.sources))
 
-    slug = re.sub(r"[^a-z0-9]+", "-", profile.name.lower()).strip("-")
+    slug = slugify(profile.name)
     col1, col2, col3, _ = st.columns([1, 1, 1, 3])
     col1.download_button("Download Markdown", briefing_markdown(state), f"{slug}-competitors.md", "text/markdown")
-    col2.download_button("Download JSON", state_to_json(state), f"{slug}-competitors.json", "application/json")
+    col2.download_button(
+        "Download JSON", json.dumps(state_to_dict(state), indent=2), f"{slug}-competitors.json", "application/json"
+    )
     if col3.button("New research"):
         reset()
         st.rerun()
@@ -187,7 +196,25 @@ with st.sidebar:
     )
     news_days = st.slider("News window (days)", 7, 365, config.NEWS_LOOKBACK_DAYS, step=1)
     review = st.toggle("Review competitors before research", value=True)
+    ss.use_cache = st.toggle(
+        f"Use cached results ({config.CACHE_TTL_HOURS}h)", value=True,
+        help="Reuses Keenable searches and LLM outputs from the last few hours, so repeated research "
+        "costs no Groq tokens. Turn off to force fresh research.",
+    )
     st.caption(f"Model: `{config.GROQ_MODEL}`")
+
+    st.header("Saved reports")
+    saved = list_reports()
+    if saved:
+        choice = st.selectbox("Open a past briefing", saved, format_func=lambda r: r.label, index=None)
+        if st.button("Open", disabled=choice is None) and choice:
+            reset()
+            ss.phase, ss.result, ss.saved_path = "done", load_report(choice.path), choice.path
+            st.rerun()
+    else:
+        st.caption("Finished briefings are saved to `reports/` and listed here.")
+    if st.button("Clear cache"):
+        st.toast(f"Removed {cache.clear()} cached entries")
 
 st.title("🔎 Marketing Research Agent")
 st.write(

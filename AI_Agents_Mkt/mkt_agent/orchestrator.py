@@ -11,15 +11,17 @@ The pipeline stops after the briefing is produced: it takes no business actions.
 
 import json
 import operator
+from datetime import datetime
 from typing import Annotated, AsyncIterator, TypedDict
 
+import groq
 from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Command, Send, interrupt
 
-from . import config, schemas
+from . import cache, config, schemas
 from .agents import analyze_competitor, discover_competitors, gather_dossier, profile_company
 from .keenable import KeenableClient
 from .llm import structured_llm
@@ -93,6 +95,10 @@ def build_graph(keenable: KeenableClient, checkpointer: BaseCheckpointSaver | No
             )
             report.sources = list(dict.fromkeys(r["url"] for results in dossier.values() for r in results))
             report.card = await analyze_competitor(task["profile"], task["competitor"], dossier)
+        except groq.RateLimitError:
+            # Still rate limited after the SDK's retries (usually the daily token quota):
+            # the other competitors would fail too, so stop the run with the real cause
+            raise
         except Exception as e:  # one failed competitor shouldn't stop the others
             report.error = f"{type(e).__name__}: {e}"
         return {"reports": [report]}
@@ -101,7 +107,8 @@ def build_graph(keenable: KeenableClient, checkpointer: BaseCheckpointSaver | No
         profile = state["profile"]
         cards = [r.card.model_dump() for r in sorted(state["reports"], key=lambda r: r.rank) if r.card]
         if not cards:
-            raise RuntimeError("No competitor could be analyzed; see the report errors.")
+            errors = "; ".join(f"{r.competitor.name}: {r.error}" for r in state["reports"])
+            raise RuntimeError(f"No competitor could be analyzed. {errors}")
         prompt = BRIEFING_PROMPT.format(
             name=profile.name,
             industry=profile.industry,
@@ -157,13 +164,14 @@ async def stream_research(
     resume: list[dict] | None = None,
     thread_id: str = "default",
     checkpointer: BaseCheckpointSaver | None = None,
+    use_cache: bool = True,
 ) -> AsyncIterator[tuple[str, dict]]:
     """Start a run (`inputs`) or resume a paused one (`resume` = approved competitors).
 
     Yields ("update", {node: output}) per finished step, then either
     ("review", {"profile", "competitors"}) when paused for review, or ("done", final_state).
     Pausing for review requires a checkpointer, and resuming needs the same checkpointer
-    and thread_id.
+    and thread_id. use_cache=False forces fresh Keenable searches and LLM calls.
     """
     config.check_config()
     if (inputs is None) == (resume is None):
@@ -171,6 +179,12 @@ async def stream_research(
     run_config = {"configurable": {"thread_id": thread_id}}
     payload = Command(resume=resume) if resume is not None else inputs
 
+    with cache.enabled(use_cache):
+        async for event in _stream_graph(payload, run_config, checkpointer):
+            yield event
+
+
+async def _stream_graph(payload, run_config: dict, checkpointer) -> AsyncIterator[tuple[str, dict]]:
     async with KeenableClient() as keenable:
         graph = build_graph(keenable, checkpointer)
         final_state: dict = {}
@@ -183,13 +197,14 @@ async def stream_research(
             else:
                 yield "update", data
         final_state["reports"] = sorted(final_state.get("reports", []), key=lambda r: r.rank)
+        final_state["generated_at"] = datetime.now().isoformat(timespec="seconds")
         yield "done", final_state
 
 
-async def run_research(company: str, website: str = "", **settings) -> dict:
+async def run_research(company: str, website: str = "", use_cache: bool = True, **settings) -> dict:
     """Run the whole pipeline without review and return the final state."""
     final_state: dict = {}
-    async for kind, data in stream_research(research_inputs(company, website, **settings)):
+    async for kind, data in stream_research(research_inputs(company, website, **settings), use_cache=use_cache):
         if kind == "done":
             final_state = data
     return final_state
