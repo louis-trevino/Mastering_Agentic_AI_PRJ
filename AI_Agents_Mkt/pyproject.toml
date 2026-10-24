@@ -1,0 +1,25 @@
+[project]
+name = "marketing-research-agent"
+version = "0.2.0"
+description = "Marketing Research Agent: competitive market research with LangGraph, Groq and Keenable"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=0.37.1",
+    "langchain-core>=1.6.11",
+    "langchain-groq>=1.1.3",
+    "langgraph>=1.2.16",
+    "mcp>=2.3.0",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.66.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
