@@ -28,16 +28,24 @@ The possible categories are: order status, refund request, product issue, accoun
 uv sync
 ```
 
-## Run Ingestion App
+## Run Categorization Eval App
 
 The Ingestion app only needs to be run once, or every time the Knowledge Base data (json) changes.
 ```
-py ingest.py
+py categ_eval.py
 ```
 
-## Run Retrieval App
-```
-py retriever_hybrid.py
+## App Flow
+```mermaid
+graph TD;
+Cat(Define Customer Support Categories) --> SEED(Get Seed Data);
+SEED --> XP(Expand sample data from seed data);
+XP --> CA(Build Classification Agent) --> TR(Create Tracer) --> PR(Run Predictions using Tracer);
+PR --> LS(Observe result data in LangSmith portal);
+PR --> RES(Optionally Export result data to CSV file);
+LS --> RF(Refactor Code, Prompts or Seed Data);
+RES --> RF;
+RF --> SEED;
 ```
 
 ## Sample user query
