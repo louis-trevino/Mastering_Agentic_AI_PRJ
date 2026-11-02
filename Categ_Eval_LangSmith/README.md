@@ -48,8 +48,4 @@ RES --> RF;
 RF --> SEED;
 ```
 
-## Sample user query
 
-You can use the User Query below to test the Retriever app:
-
-My front load washer door won't open. What can I do?
