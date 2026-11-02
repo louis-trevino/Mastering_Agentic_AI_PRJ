@@ -1,0 +1,29 @@
+"Hi, I ordered my prescription glasses 5 days ago and the tracking page hasn't updated. Can you tell me where it is?",order_status
+"I never received my order and I want my money back.",order_status
+"Order shows delivered last Tuesday but it's not at my door, my neighbor's, or the mailroom. What now?",order_status
+"The website said 2-day shipping. It's been 9 days. Are you kidding me?",order_status
+"Tracking link in the email just spins forever.",order_status
+
+"I'd like to return my prescription glasses I bought last week and get my money back. They're unopened.",refund_request
+"Where is my refund? I returned the item two weeks ago and still nothing on my card.",refund_request
+"Please cancel order 99021 and refund my card. I no longer need it.",refund_request
+"I was charged $89 but the website showed $79 at checkout. Please refund the difference.",refund_request
+"Returning these for store credit is fine but honestly I'd prefer cash back to my original card.",refund_request
+
+"The sunglasses arrived scratched. Really disappointed.",product_issue
+"My smartglasses arrived damaged and I want a full refund, not a replacement.",product_issue
+"You sent me a white pair of sunglasses but I ordered them black. Second time this has happened.",product_issue
+"The smartglasses product description said 'wireless charging' but I had to buy a wire to charge them. Misleading.",product_issue
+"The smartglasses themselves work fine but the box was crushed and the instruction manual is missing.",product_issue
+
+"I can't log into my account — it keeps saying my password is wrong even after I reset it.",account_help
+"How do I update the credit card on file? I don't see the option anywhere in settings.",account_help
+"The website won't let me check out — it keeps logging me out mid-payment.",account_help
+"Please remove my old shipping address. I moved last month and don't want stuff going there.",account_help
+"I keep getting 2FA codes I didn't request. Is someone trying to access my account?",account_help
+
+"Do you guys ship to Canada? Couldn't find it on the FAQ page.",other
+"Just wanted to say the customer service rep I spoke to yesterday was amazing. Thank you!",other
+"Is the red version of SKU-1140 back in stock?",other
+"Do you offer a student discount? Couldn't find one at checkout.",other
+"When's your next sale? My birthday is coming up and I'd love to splurge.",other

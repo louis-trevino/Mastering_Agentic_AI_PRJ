@@ -1,0 +1,19 @@
+[
+  {
+    "content": "Please check the mailroom, the lobby or any other common areas.",
+    "metadata": {
+      "ticket_id": "TKT-00001",
+      "doc_type": "support_ticket",
+      "category": "order_status",
+      "priority": "P1",
+      "product_type": "smart_glasses",
+      "product_user" : "men",
+      "customer_tier": "all",
+      "status": "pending",
+      "title": "My order hasn't arrived, but the status shows as delivered",
+      "language": "en",
+      "created_date": "2025-10-23T12:15:14Z",
+      "updated_date": "2025-10-23T12:15:14Z"
+    }
+  }  
+]

@@ -27,6 +27,13 @@ Built with Python, LangGraph, LangChain, Groq (`openai/gpt-oss-120b`), the Keena
 profile_company -> discover_competitors -> review_competitors -> research_competitor (x N, parallel) -> compile_briefing
 ```
 
+```mermaid
+graph TD;
+    Prof(Profiler) --> Dis(Discovery) --> Rev(Reviewer)
+    Rev --> Res(Researcher) --> Par([x N, parallel]) --> Com(Compile Briefing)
+```
+
+
 ## Setup
 
 ```
