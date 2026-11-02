@@ -48,4 +48,9 @@ RES --> RF;
 RF --> SEED;
 ```
 
+## LangSmith Portal
+
+[Result Data Overview](https://smith.langchain.com/o/d89f27c4-fd61-4737-8157-534feaf2c6cc/a/customer-support-evals)
+
+[Tracing](https://smith.langchain.com/o/d89f27c4-fd61-4737-8157-534feaf2c6cc/a/customer-support-evals/projects/p/ae9e64f6-7abc-427d-80c0-90d83823d30e)
 
