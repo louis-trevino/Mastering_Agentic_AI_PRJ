@@ -10,16 +10,16 @@ By Luis C Trevino, 2026
 
 [Sample data](./kb_eyeglass_01.json)
 
-[Demo](.)
+[Demo](https://www.loom.com/share/6b637d09548c424aa0b1e9d0c3bb5cb0)
 
 ## Project Description
 
-The Classification Eval application will evaluate an intent classifier for SuperGlasses, an online eyeglass store customer support system. The classifier predicts which category a customer ticket belongs to. 
+The Categorization Eval application will evaluate an intent classifier for SuperGlasses, an online eyeglass store customer support system. The classifier predicts which category a customer ticket belongs to.
 
-Evaluations of the classification system will be executed by recording the actual values against the expected ones. We will manually annotate failures, define failure categories from your observations, make one focused prompt improvement, and compare the before-and-after results. 
-
+ The possible categories are: order status, refund request, product issue, account help, and “other”.
 The dataset would be generated from 25 seed tickets, which will later be expanded into 100 tickets by using LLM-driven paraphrasing.
-The possible categories are: order status, refund request, product issue, account help, and “other”.
+
+Evaluations of the classification system will be executed by recording the actual values against the expected ones. We will manually annotate failures, define failure categories from the observations, improvements will be done (e.g. prompts, code or data), and the before-and-after results will be compared. 
 
 
 
@@ -39,8 +39,8 @@ py categ_eval.py
 ```mermaid
 graph TD;
 Cat(Define Customer Support Categories) --> SEED(Get Seed Data);
-SEED --> XP(Expand sample data from seed data);
-XP --> CA(Build Classification Agent) --> TR(Create Tracer) --> PR(Run Predictions using Tracer);
+SEED --> XP(Expand sample data from seed data by Paraphrasing);
+XP --> CA(Run Classification Agent) --> TR(Create Tracer) --> PR(Run Predictions using Tracer);
 PR --> LS(Analyse result data in LangSmith portal);
 PR --> RES(Export result data to CSV file and analyse results);
 LS --> RF(Refactor Code, Prompts or Seed Data);
