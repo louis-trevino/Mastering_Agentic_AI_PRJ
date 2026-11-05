@@ -127,7 +127,7 @@ for cat, n in Counter(t["true_category"] for t in tickets).items():
 from app_agents.classif_agent import build_agent
 from app_prompts.app_prompts import CATEG_PROMPT, CATEG_PROMPT_WEAK, CATEG_PROMPT_STRONG
 
-agent = build_agent(CATEG_PROMPT_STRONG)
+agent = build_agent(CATEG_PROMPT_WEAK)
 
 # Show one ticket.
 #sample = agent.invoke({"ticket_text": tickets[0]["text"], "category": "", "reasoning": ""})

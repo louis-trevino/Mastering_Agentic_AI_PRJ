@@ -39,7 +39,7 @@ vector_store = PineconeVectorStore(
 vector_retriever = vector_store.as_retriever(search_kwargs={"k": 3})
 
 # BM25 search
-with open("kb_eyeglass_02.json") as f:
+with open("kb_eyeglass_01.json") as f:
     kb = json.load(f)
 
 raw_docs = [
@@ -120,4 +120,4 @@ print("\n" + "-" * 80 + "\n")
 print(response.content)
 print("\n" + "-" * 80 + "\n")
 
-print("Thank you for using the SuperGlasses RAG app! Have an awesome day :) ")
+print("Thank you for using the SuperGlasses RAG app! Have an awesome day :) \n")

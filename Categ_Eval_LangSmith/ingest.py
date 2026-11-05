@@ -37,7 +37,6 @@ print("Docs count:", len(docs))
 def wrap_text(text, width=80):
     return '\n'.join([text[i:i+width] for i in range(0, len(text), width)])
 
-
 print(wrap_text(docs[1].page_content))
 print("-" * 50)
 
