@@ -63,7 +63,7 @@ bm25_retriever.k = 3
 # Instantiate LLM
 llm = ChatOpenAI(model="gpt-4.1-mini")
 
-template = """You are a customer support specialist for SuperGlasses, a washing machine company.
+template = """You are a customer support specialist for SuperGlasses, an eyeglass machine company.
 Use the context below to help resolve the customer's qustion.
 
 If the context doesn't contain the answer, state that you don't have that information rather than guessing.
