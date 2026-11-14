@@ -1,0 +1,227 @@
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --muted: #5f6b7a;
+  --border: #dde3ea;
+  --primary: #1d5fd1;
+  --primary-hover: #174ea9;
+  --chip-bg: #eaf1fd;
+  --error-bg: #fdecec;
+  --error-text: #9b1c1c;
+  --ticket: #fff3d6;
+  --ticket-text: #7a5300;
+  --manual: #e2f5e9;
+  --manual-text: #17663a;
+  --bg-overlay: rgba(245, 247, 250, 0.72);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161c;
+    --surface: #1b2129;
+    --text: #e6eaf0;
+    --muted: #9aa5b3;
+    --border: #2d3540;
+    --primary: #5b93f0;
+    --primary-hover: #7aa8f4;
+    --chip-bg: #22304a;
+    --error-bg: #3a1d1d;
+    --error-text: #f5b4b4;
+    --ticket: #3b3016;
+    --ticket-text: #f0cf7e;
+    --manual: #173226;
+    --manual-text: #8fdcae;
+    --bg-overlay: rgba(18, 22, 28, 0.8);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+/*
+ * Background photo (frontend/img/bg_img_01.jpg, bundled by Vite via the relative URL).
+ * It sits on a fixed layer (works on mobile, unlike background-attachment: fixed)
+ * under a translucent wash (--bg-overlay) so text and cards stay readable in light and dark mode.
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("../img/bg_img_01.jpg") center / cover no-repeat,
+    var(--bg);
+}
+
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.header h1 { margin: 0 0 4px; font-size: 1.75rem; }
+.subtitle { margin: 0 0 24px; color: var(--muted); }
+
+.ask-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.ask-form textarea {
+  width: 100%;
+  border: none;
+  resize: vertical;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hint { font-size: 0.8rem; color: var(--muted); }
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-weight: 600;
+}
+button[type="submit"]:hover:not(:disabled) { background: var(--primary-hover); }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.samples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 24px;
+}
+.samples-label { font-size: 0.85rem; color: var(--muted); }
+
+.chip {
+  background: var(--chip-bg);
+  color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+.chip:hover:not(:disabled) { border-color: var(--primary); }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.result-question { color: var(--muted); font-style: italic; margin: 0 0 12px; }
+
+.answer, .citations {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.answer h2, .citations h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.answer p { margin: 0; white-space: pre-wrap; }
+
+.citations ol { list-style: none; margin: 0; padding: 0; }
+.citation { padding: 12px 0; border-top: 1px solid var(--border); }
+.citation:first-child { border-top: none; padding-top: 4px; }
+
+.citation-head { display: flex; gap: 10px; align-items: baseline; }
+.citation-num {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--chip-bg);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.citation-title { font-weight: 600; }
+
+.citation-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 6px 32px; }
+.tag {
+  font-size: 0.72rem;
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--chip-bg);
+  color: var(--muted);
+  text-transform: capitalize;
+}
+.tag-support_ticket { background: var(--ticket); color: var(--ticket-text); }
+.tag-user_manual { background: var(--manual); color: var(--manual-text); }
+.tag-id { text-transform: none; font-family: ui-monospace, Consolas, monospace; }
+
+.citation-snippet { margin: 0 0 0 32px; color: var(--muted); font-size: 0.9rem; }
+
+.footer { margin-top: 32px; font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .hint { display: none; }
+  .form-row { justify-content: flex-end; }
+}
