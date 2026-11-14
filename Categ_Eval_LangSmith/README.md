@@ -1,56 +1,132 @@
-## Week 4 Project
+# SuperGlasses Hybrid RAG App
 
-# Categorization Eval App
+This project contains the SuperGlasses customer-support RAG system and its React web
+front end. The backend combines Pinecone semantic retrieval with local BM25 keyword
+retrieval, then uses OpenAI to produce a grounded answer with source citations.
 
-By Luis C Trevino, 2026
+## Project layout
 
-## Project Links
+- `rag_service.py` — reusable hybrid retrieval and answer-generation service
+- `api.py` — FastAPI endpoints used by the React app
+- `retriever_hybrid.py` — interactive terminal version of the RAG workflow
+- `kb_eyeglass_01.json` — local knowledge base used by BM25
+- `frontend/` — React, Vite, and TypeScript web application
 
-[Documentation](https://docs.google.com/document/d/1hhCq1UY4R2XK21wq4UDZhqfaGZ73WHj4AtVp2LDVZus/edit?tab=t.0)
+## Prerequisites
 
-[Sample data](./kb_eyeglass_01.json)
+- Python 3.13+
+- [uv](https://docs.astral.sh/uv/)
+- Node.js 20+
 
-[Demo](https://www.loom.com/share/6b637d09548c424aa0b1e9d0c3bb5cb0)
+## Backend setup
 
-## Project Description
+From the `Categ_Eval_LangSmith` directory:
 
-The Categorization Eval application will evaluate an intent classifier for SuperGlasses, an online eyeglass store customer support system. The classifier predicts which category a customer ticket belongs to.
-
- The possible categories are: order status, refund request, product issue, account help, and “other”.
-The dataset would be generated from 25 seed tickets, which will later be expanded into 100 tickets by using LLM-driven paraphrasing.
-
-Evaluations of the classification system will be executed by recording the actual values against the expected ones. We will manually annotate failures, define failure categories from the observations, improvements will be done (e.g. prompts, code or data), and the before-and-after results will be compared. 
-
-
-
-## Setup
-```
-uv sync
-```
-
-## Run Categorization Eval App
-
-The Ingestion app only needs to be run once, or every time the Knowledge Base data (json) changes.
-```
-py categ_eval.py
+```powershell
+uv sync --all-groups
+Copy-Item .env.example .env
 ```
 
-## App Flow
-```mermaid
-graph TD;
-Cat(Define Customer Support Categories) --> SEED(Get Seed Data);
-SEED --> XP(Expand sample data from seed data by Paraphrasing);
-XP --> CA(Run Classification Agent) --> TR(Create Tracer) --> PR(Run Predictions using Tracer);
-PR --> LS(Analyse result data in LangSmith portal);
-PR --> RES(Export result data to CSV file and analyse results);
-LS --> RF(Refactor Code, Prompts or Seed Data);
-RES --> RF;
-RF --> SEED;
+Populate `.env` with your OpenAI and Pinecone values:
+
+```dotenv
+OPENAI_API_KEY=...
+PINECONE_API_KEY=...
+PINECONE_INDEX_NAME=...
+PINECONE_NAMESPACE=...
+FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 ```
 
-## LangSmith Portal
+Start the FastAPI server using the project startup script:
 
-[Result Data Overview](https://smith.langchain.com/o/d89f27c4-fd61-4737-8157-534feaf2c6cc/a/customer-support-evals)
+```powershell
+.\start_backend.ps1
+```
 
-[Tracing](https://smith.langchain.com/o/d89f27c4-fd61-4737-8157-534feaf2c6cc/a/customer-support-evals/projects/p/ae9e64f6-7abc-427d-80c0-90d83823d30e)
+The script always uses `Categ_Eval_LangSmith` as its base directory and starts
+the API at <http://localhost:8000>. API documentation is available at
+<http://localhost:8000/docs>.
 
+If PowerShell blocks local script execution for the current user, run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+The interactive terminal workflow remains available:
+
+```powershell
+uv run python retriever_hybrid.py
+```
+
+## Frontend setup
+
+From the `frontend` directory:
+
+```powershell
+npm install
+Copy-Item .env.example .env
+npm run dev
+```
+
+The frontend runs at <http://localhost:5173> and calls the backend at
+`http://localhost:8000`. If the API runs at another address, set
+`VITE_API_BASE_URL` in `frontend/.env`.
+
+Open <http://localhost:5173> to use the assistant.
+Open <http://localhost:5173> to use the assistant.
+Open <http://localhost:5173> to use the assistant.
+
+## API
+
+### `GET /api/health`
+
+Returns `{"status":"ok"}` when the API process is available.
+
+### `POST /api/search`
+
+```json
+{
+  "question": "How do I track my order?"
+}
+```
+
+Response:
+
+```json
+{
+  "question": "How do I track my order?",
+  "answer": "Open your order page to view its latest status.",
+  "sources": [
+    {
+      "title": "Order tracking",
+      "content": "Open your order page to view tracking.",
+      "doc_type": "support_ticket",
+      "category": "order_status",
+      "ticket_id": "TKT-00002"
+    }
+  ]
+}
+```
+
+Questions must contain 3–1000 characters. API documentation is available at
+<http://localhost:8000/docs>.
+
+## Tests and validation
+
+```powershell
+# Backend
+uv run pytest tests -q
+
+# Frontend
+npm test --prefix frontend
+npm run lint --prefix frontend
+npm run build --prefix frontend
+```
+
+## Security notes
+
+- Never expose OpenAI or Pinecone credentials through `VITE_*` variables; Vite
+  variables are sent to the browser.
+- The frontend contains no credentials and communicates only with the FastAPI API.
+- Set `FRONTEND_ORIGINS` to the exact deployed front-end origins in production.
