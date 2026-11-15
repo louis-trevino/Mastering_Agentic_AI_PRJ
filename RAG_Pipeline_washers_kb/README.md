@@ -9,6 +9,9 @@
 
 [Demo](https://www.loom.com/share/317e2ab3b43341cb8514752e1a22163f)
 
+## Web App Screenshot
+![Web App Screenshot](./RAG_web_app_01.png)
+
 ## Project Description
 
 MegaWash RAG App helps customers answer customer support questions from the internal Knowledge Base (support tickets + FAQ documents + product manuals).
