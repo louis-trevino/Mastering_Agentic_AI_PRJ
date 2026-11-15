@@ -4,6 +4,10 @@ This project contains the SuperGlasses customer-support RAG system and its React
 front end. The backend combines Pinecone semantic retrieval with local BM25 keyword
 retrieval, then uses OpenAI to produce a grounded answer with source citations.
 
+## Web App screenshot
+
+![Web App Screenshot](./RAG_Superglasses_web_app_01.png)
+
 ## Project layout
 
 - `rag_service.py` — reusable hybrid retrieval and answer-generation service
